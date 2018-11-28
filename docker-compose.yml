@@ -1,0 +1,14 @@
+version: '3'
+
+volumes:
+  jenkins_home:
+    external: true
+
+services:
+  jenkins:
+    build:
+      context: .
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    ports:
+      - "8080:8080"
