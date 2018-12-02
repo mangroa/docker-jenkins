@@ -128,7 +128,7 @@
         "ContainerDefinitions" : [ 
           {
             "Name": "jenkins",
-            "Image": "mangroa/jenkins:latest",
+            "Image": "alanmangroo/jenkins:latest",
             "Memory": 512,
             "PortMappings": [ { "ContainerPort": 8080, "HostPort": 8080 } ],
             "MountPoints": [
