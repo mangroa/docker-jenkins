@@ -22,9 +22,14 @@ Get the Jenkins URL from the AWS Stack output values.
 
 To access the initial key:
 1. SSH onto the EC2 
+
 `ssh -i <keyname> ec2-user@<EC2_IP>`
+
 2. Get the list of container IDs
+
 `docker ps`
+
 3. Get the password from the container running on the EC2 host
+
 `docker exec -it <CONTAINER_ID> more /var/jenkins_home/secrets/initialAdminPassword`
 
