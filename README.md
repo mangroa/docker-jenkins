@@ -1,4 +1,5 @@
 
+# Build Jenkins Docker instance hosted on AWS ECS
 This repo creates a Jenkins Docker Image and pushes it to Docker Hub.
 The stack starts the Jenkins instance in a Docker container running in AWS ECS.
 
