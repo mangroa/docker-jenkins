@@ -1,19 +1,24 @@
 
-Create image 
+This repo creates a Jenkins Docker Image and pushes it to Docker Hub.
+The stack starts the Jenkins instance in a Docker container running in AWS ECS.
+
+# Create the image and stack
+1. Create image 
+
 docker build -t alanmangroo/jenkins:latest .
 
-Push the image to Docker Hub
+2. Push the image to Docker Hub
+
 docker login --username=<USERNAME>
+  
 docker push alanmangroo/jenkins:latest
 
+3. Create this stack in AWS to build a Jenkins instance that runs inside a Docker container.
 
-Create this stack in AWS for a Jenkins instance that runs inside a Docker container.
 
+# Access Jenkins using the ELB public URL
 
-This stack starts a Jenkins instance in a Docker container running in AWS ECS.
-
-Access Jenkins using the ELB public URL
-
+Get the Jenkins URL from the AWS Stack output values.
 
 To access the initial key:
 1. SSH onto the EC2 
